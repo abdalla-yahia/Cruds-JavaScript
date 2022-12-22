@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equive="X-UA-Compitaple" content="IE=edge">
+        <meta name="viewport" content="width=deevice-width,initial-scale=1.0">
+        <!--Google Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Roboto:ital,wght@0,100;0,300;1,100&family=Work+Sans:ital,wght@0,200;0,300;0,400;0,600;0,800;1,200;1,300;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <title>CRUDS</title>
+        <style> @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Roboto:ital,wght@0,100;0,300;1,100&family=Work+Sans:ital,wght@0,200;0,300;0,400;0,600;0,800;1,200;1,300;1,700;1,800;1,900&display=swap'); </style>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" href="./icon/favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <!--Start Header-->
+        <header>
+            <nav>
+                <div class="logo">
+                    LOGO
+                </div>
+                <ul>
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">contact</a></li>
+                    <li><a href="#">products</a></li>
+                    <li><a href="#">services</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!--End Header-->
+        <!--Start Section Content-->
+        <section class="content">
+            <div class="container">
+                <h1>Cruds Of Our Store <br> Retaj Store</h1>
+                <div class="box-input">
+                        <input type="text"            onkeyup="getElementId(this.id,this.value)" id="title" placeholder="Title">
+                    <div class="box-price">
+                        <input type="number" min="0"  onkeyup="getElementId(this.id,this.value)" id="price" placeholder="Price" >
+                        <input type="number" min="0"  onkeyup="getElementId(this.id,this.value)" id="taxes" placeholder="taxes" >
+                        <input type="number" min="0"  onkeyup="getElementId(this.id,this.value)" id="ads" placeholder="ads" >
+                        <input type="number" min="0"  onkeyup="getElementId(this.id,this.value)" id="discount" placeholder="Discount" >
+                        <span id="total"></span>
+                    </div>
+                        <input type="number" onkeyup="getElementId(this.id,this.value)" id="count" placeholder="Count Less Than 100 Product"  min="0" max="100">
+                        <input type="text"   onkeyup="getElementId(this.id,this.value)" id="category" placeholder="Category">
+                    <button class="create"  id="submit">Create</button>
+                    <input type="text"  id="search" placeholder="Search" >
+                    <div id="box-search"></div>
+                    <div class="box-serch">
+                        <button onclick="serchBy(this.id,this)" id="search-by-title">Search By Title </button>
+                        <button onclick="serchBy(this.id,this)" id="search-by-category">Search By Category</button>
+                    </div>
+                </div>
+                <div class="box-showing">
+                    <table>
+                        <thead>
+                            
+                            <th>id</th>
+                            <th>title</th>
+                            <th>price</th>
+                            <th>taxes</th>
+                            <th>ads</th>
+                            <th>discount</th>
+                            <th>total</th>
+                            <th>category</th>
+                            <th>update</th>
+                            <th>delete</th>
+                            
+                        </thead>
+                        <tbody id="tbody">
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <!--End Section Content-->
+        <footer>
+
+        </footer>
+        <script src="js/app.js"></script>
+    </body>
+    </html>
